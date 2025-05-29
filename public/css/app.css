@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    :root{
+        --bodybg:#f6f6f6;
+        --bodyfont:#2b3445;
+          --blue:#9fc5ef;
+          --icons:#40464d;
+    }
+body{
+    font-family: system-ui,-apple-system, "Roboto",sans-serif;
+    background-color: var(--bodybg);
+    color: var(--bodyfont);
+}
+a,button{
+  all: unset;
+  transition: 0.2s;
+  
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10%;
+  padding-top: 1.2rem;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.sign-in,.register{
+  border: 1px solid var(--bodyfont);
+  padding: 0.44rem 1rem;
+  border-radius: 55px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.sign-in:hover,.register:hover{
+  background-color: var(--bodyfont);
+  color: var(--blue);
+  cursor: pointer;
+
+}
+::-webkit-scrollbar {
+    width: 0.88rem;
+   }
+   
+  ::-webkit-scrollbar-track {
+    border: 7px solid #292c3b;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    background-color: #d4d4d8;
+    }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 2px;
+  }
+   
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+   
+  /* for Firefox */
+   html {scrollbar-color: #9e4673 #3d4a59;} 
+
+ .nav  .fa-solid{
+ color: var(--icons);
+ margin-right: 0.3rem;
+ }
+ button:active,a:active{
+  scale: 0.9;
+ }
+ .sign-in:hover .fa-solid,.register:hover .fa-solid{
+  color: var(--blue);
+ }
+ .card{
+  background-color: var(--bodyfont);
+  color: var(--blue);
+  font-size: 0.9rem;
+  padding: 0.44rem 1.1rem 0.44rem 0.6rem;
+  border-radius: 55px;
+  cursor: pointer;
+ }
+ .card .fa-solid{
+  color: var(--blue);
+ }
+ .products-number{
+  position: absolute;
+  background-color: rgb(201, 89, 89);
+  height: 20px;
+  width: 20px;
+  right: 0;
+  top: -5px;
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+ }
+ .card{
+  position: relative;
+ }
+ /**left side header*/
+ header .fa-bag-shopping{
+  font-size: 2rem;
+ }
+ .logo-prg{
+  letter-spacing: 0.5px;
+ }
+ .logo span{
+ font-weight: bold;
+ }
+/**section>content */
+.content{
+ font-size: 2rem;
+ position: absolute;
+ top: 59%;
+ transform: translateY(-50%);
+ margin-left: 10%;
+}
+.top-img{
+  background-image:url(../images/bac.jpg);
+ background-size: cover;
+ background-position: top;
+ background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+.content .lifestyle{
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.content .men{
+  margin-top: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content .sale{
+  margin-block: 0.5rem;
+  font-weight: bold;
+}
+.sale span{
+  color: crimson;
+  margin-left: 0.8rem;
+}
+.content .free-shipping{
+  font-size: 1.5rem;
+}
+.content button{
+  background-color: black;
+  color: white;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  padding: 0.6rem 1.6rem;
+}
+/** image product main */
+.img-card1{
+  width: 266px;
+}
+.card-info{
+  width: 266px;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+section .card-article{
+  border-radius: 5px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: 0.2;
+}
+section .card-article:hover{
+  scale: 1.01;
+}
+.card-article .img-card1{
+  border-radius: 5px 5px 0 0;
+}
+
+ /**responsive mobile */
+ @media (width < 600px ) {
+ 
+  .logo{
+    display: none;
+  }
+  header .nav{
+    flex-direction: column;
+    padding-inline: 0;
+    gap: 25px;
+  }
+  .header{
+    padding-inline: 0;
+    justify-content: center;
+   
+    
+  }
+ }
+ @media (width < 1000px){
+  .top-img{
+    background-position: left;
+  }
+ }
